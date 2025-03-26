@@ -12,14 +12,14 @@ Currently, two official plugins are available:
 
 ### Instalacion de librerias.
 
-```yarn install
+```yarn install```
 
 ### Como ver todos los ejercicios.
 
-En el archivo de main,jsx vienen todas las rutas solo cambiar la etiqueta <MainApp> por todas las importaciones
+En el archivo de main.jsx vienen todas las rutas, solo cambiar la etiqueta <MainApp> por todas las importaciones
 
 ``` <BrowserRouter>
     {/* <StrictMode> */}
       <MainApp />
     {/* </StrictMode>, */}
-  </BrowserRouter>
+  </BrowserRouter>```
