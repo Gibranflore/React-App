@@ -30,7 +30,6 @@ describe('Haceer la prueba del componente <LoginPage/>', () => {
 
         const button = screen.getByRole( 'button' );
         fireEvent.click( button );
-
         expect(setUserMock).toHaveBeenCalledWith({"email": "correo@gamilc.om", "id": 1, "name": "gibran"})
 
     })

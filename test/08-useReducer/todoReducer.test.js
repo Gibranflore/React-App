@@ -4,6 +4,8 @@ import { todoReducer } from "../../src/08-useReducer/todoReducer"
 
 describe('Pruebas en todoReducer', () => {
 
+    // initialState: Es una constante que representa el estado inicial
+    //  de tu aplicación o módulo.
     const initialState = [{
         id: 1,
         description: 'Demo Todo',
@@ -14,11 +16,14 @@ describe('Pruebas en todoReducer', () => {
 
         const newState = todoReducer( initialState, {} );
         expect( newState ).toBe(initialState)
+        // Evalúa que el estado retornado por el todoReducer (newState) sea exactamente el mismo que initialState
     })
 
     test('Debe de Agreagar un Todo', () => {
         
         const action = {
+            // type sepa qué operación debe realizar. 
+            // En este caso, se trata de añadir un nuevo "Todo".
             type: '[TODO] add Todo',
             payload: {
                 id: 2,
@@ -28,6 +33,7 @@ describe('Pruebas en todoReducer', () => {
         };
         const newState = todoReducer( initialState, action );
         expect( newState.length ).toBe( 2 )
+        //Evalúa que el nuevo estado contenga dos elementos en total
         expect( newState ).toContain(action.payload)
     });
 

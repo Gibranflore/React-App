@@ -47,7 +47,6 @@ describe('Hacer la prueba de TodoItem', () => {
 
         const spanElement = screen.getByLabelText('span');
         fireEvent.click( spanElement );
-
         expect( onToggleTodoMock ).toHaveBeenCalledWith( todo.id )
     })
 

@@ -6,9 +6,9 @@ import { useTodo } from "../../src/hook/useTodo"
 //  evitando depender de implementaciones externas (como llamadas reales a una API). Ahora,
 //  vamos a desglosarlo:
 
-//El método mockReturnValue (de Jest) establece un valor de retorno simulado para la función/hook useFetch
 jest.mock('../../src/hook/useTodo')
 
+//El método mockReturnValue (de Jest) establece un valor de retorno simulado para la función/hook useFetch
 useTodo.mockReturnValue({
     todos: [
         { id: 1, description: 'Todo #1', done: false, },

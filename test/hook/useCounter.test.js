@@ -30,9 +30,11 @@ describe('Pruebas de counter', () => {
 
             const { result } = renderHook( () => useCounter(100) );
             const { counter, incremnt } = result.current
+            //Es el estado actual retornado por el hook. En este caso, contiene:
 
+            //Asegura que todos los cambios de estado ocurran de manera coherente en los tests. Dentro del act:
             act(() => {
-                incremnt();
+                incremnt(); //Su valor predefinnido es 1 y se suma 1+2
                 incremnt(2);
             })
             
